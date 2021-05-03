@@ -1,0 +1,1 @@
+{"dependencies":[["concurrent-ruby",["~> 1.0"]],["tzinfo",[">= 0"]],["tzinfo-data",[">= 0"]],["vagrant-guests-clearlinux",["= 1.2.4"]],["log4r",[">= 0"]],["i18n",[">= 0"]],["micromachine",[">= 2","< 4"]],["vagrant-vbguest",["= 0.29.0"]],["vagrant-winnfsd",["= 1.4.0"]]],"checksum":"67670ab4e86432388073b7723ad434edc95ff1b17f6812f716bd0ba7bacf53a7","vagrant_version":"2.2.15"}

@@ -1,4 +1,4 @@
-# Readme
+# Домашняя работа
 
  # Настройка окружения git
 
@@ -12,7 +12,24 @@
  
  Теперь файлы будут сохраняться в  формате ___Unix___ и проблем не будет.
  
+
+ # Packer
  
+ Немного отредактировал конфигурацию _centos.json_ для соответствия версии - 
+ 
+```
+    "artifact_description": "CentOS 7.9 with kernel 5.x",    
+    "artifact_version": "7.9.2009",
+    "image_name": "centos-7.9"
+```
+И при работе программы возникли проблемы с ___sudo___ при обработке скрипта, решил проблему сначала так - заменил команду создания файла /etc/sudoers.d/vagrant в файле vagrant.ks на такую команду:
+
+`echo "vagrant ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/vagrant`
+
+Но потом нашел инфу как настроить ___git___, см. п. **Настройка окружения git**
+
+Ссылка на готовый образ  <https://app.vagrantup.com/Victorzay/boxes/centos-7-9>
+
  # Установка дополнений Virtualbox Guest Additions
 
 Для автоматической установки дополнений ___Virtualbox Guest Additions___ установил плагин для ___Vagrant___ -
@@ -32,22 +49,3 @@
  `config.vm.synced_folder "./shared", "/shared", type: "virtualbox"`
  
  Синхронизация общей папки работает.
- 
- # Packer
- 
- Немного отредактировал конфигурацию _centos.json_ для соответствия версии - 
- 
-```
-    "artifact_description": "CentOS 7.9 with kernel 5.x",    
-    "artifact_version": "7.9.2009",
-    "image_name": "centos-7.9"
-```
-И при работе программы возникли проблемы с ___sudo___ при обработке скрипта, решил проблему сначала так - заменил команду создания файла /etc/sudoers.d/vagrant в файле vagrant.ks на такую команду:
-
-`echo "vagrant ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/vagrant`
-
-Но потом нашел инфу как настроить ___git___, см. п. **Настройка окружения git**
-
-Ссылка на готовый образ  <https://app.vagrantup.com/Victorzay/boxes/centos-7-9>
-
-
