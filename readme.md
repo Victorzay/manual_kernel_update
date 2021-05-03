@@ -32,7 +32,9 @@
 
  # Установка дополнений Virtualbox Guest Additions
 
-Для автоматической установки дополнений ___Virtualbox Guest Additions___ установил плагин для ___Vagrant___ -
+Пока не сделал усановку дополнение автоматически через Packer, только вручную - 
+
+Для установки дополнений ___Virtualbox Guest Additions___ установил плагин для ___Vagrant___ -
 
 `vagrant plugin install vagrant-vbguest`
 
